@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EJERCICIO 2"/>
+        <attribute name="authors" value="jossu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-24 08:52:13 p. m."/>
+        <attribute name="created" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDMtMjQ7MDc6MzQ6MTAgcC4gbS47MjY2MA=="/>
+        <attribute name="edited" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDMtMjQ7MDg6NTI6MTMgcC4gbS47MjsyNzcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Proporciona el a&#241;o en cuestion:&quot;" newline="True"/>
+            <declare name="a&#241;o" type="Integer" array="False" size=""/>
+            <input variable="a&#241;o"/>
+            <if expression="a&#241;o%400=0">
+                <then>
+                    <output expression="&quot;es bisiesto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a&#241;o%100==0">
+                        <then>
+                            <output expression="&quot;no es bisiesto&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a&#241;o%4==0">
+                                <then>
+                                    <output expression="&quot;es bisiesto&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;no es bisiesto&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EJERCICIO 1"/>
+        <attribute name="authors" value="jossu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-24 07:34:02 p. m."/>
+        <attribute name="created" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDMtMjM7MDY6MTA6MzUgcC4gbS47MjY1OQ=="/>
+        <attribute name="edited" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDMtMjQ7MDc6MzQ6MDIgcC4gbS47MzsyNzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hola, buenas cuantas donas comprara el dia de hoy? :3&quot;" newline="True"/>
+            <declare name="donas" type="Real" array="False" size=""/>
+            <declare name="precio" type="Real" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <input variable="donas"/>
+            <if expression="donas &gt;=50">
+                <then>
+                    <assign variable="precio" expression="8"/>
+                </then>
+                <else>
+                    <if expression="donas &gt;=30">
+                        <then>
+                            <assign variable="precio" expression="9"/>
+                        </then>
+                        <else>
+                            <assign variable="precio" expression="10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="precio*donas"/>
+            <output expression="&quot;Total a pagar:$&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
