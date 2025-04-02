@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="grupo"/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-01 11:29:38 p. m."/>
+        <attribute name="created" value="YnJpYW47RUxCOzIwMjUtMDMtMzE7MDc6NDg6NDggcC4gbS47MjIxNA=="/>
+        <attribute name="edited" value="YnJpYW47RUxCOzIwMjUtMDQtMDE7MTA6MTA6MTkgcC4gbS47MjsyMzAy"/>
+        <attribute name="edited" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDQtMDE7MTE6Mjk6MzggcC4gbS47MTsyNzcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Sexo" type="String" array="False" size=""/>
+            <output expression="&quot;Proporciona tu sexo M (mujer)o H (hombre)&quot;" newline="True"/>
+            <input variable="Sexo"/>
+            <declare name="Inicial" type="String" array="False" size=""/>
+            <output expression="&quot;Proporciona tu Inicial&quot;" newline="True"/>
+            <input variable="Inicial"/>
+            <if expression="(Sexo == &quot;M&quot;) AND (Inicial &gt;= &quot;A&quot; AND Inicial &lt;= &quot;M&quot;)">
+                <then>
+                    <output expression="&quot;Felicidades eres parte del grupo A!!!!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(Sexo == &quot;M&quot;) AND (Inicial &gt;= &quot;N&quot; AND Inicial &lt;= &quot;Z&quot;)">
+                        <then>
+                            <output expression="&quot;Felicidades eres parte del grupo B!!!!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="(Sexo == &quot;H&quot;) AND (Inicial &gt;= &quot;A&quot; AND Inicial &lt;= &quot;M&quot;)">
+                                <then>
+                                    <output expression="&quot;Felicidades eres parte del grupo B!!!!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Felicidades eres parte del grupo A!!!!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
