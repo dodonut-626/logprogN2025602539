@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="IMC"/>
+        <attribute name="authors" value="jossu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-04 01:15:04 a. m."/>
+        <attribute name="created" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDQtMDQ7MTI6MjQ6MzIgYS4gbS47MjY0Mw=="/>
+        <attribute name="edited" value="am9zc3U7Sk9TU1VFNjI2OzIwMjUtMDQtMDQ7MDE6MTU6MDQgYS4gbS47MTsyNzQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Proporcione su peso en kg:&quot;" newline="True"/>
+            <declare name="Peso" type="Real" array="False" size=""/>
+            <input variable="peso"/>
+            <output expression="&quot;Proporcione su altura en m:&quot;" newline="True"/>
+            <declare name="altura" type="Real" array="False" size=""/>
+            <input variable="altura"/>
+            <declare name="imc" type="Real" array="False" size=""/>
+            <assign variable="imc" expression="peso/(altura*altura)"/>
+            <output expression="&quot;tu imc es&quot;&amp;imc" newline="True"/>
+            <if expression="imc &lt;= 18.4">
+                <then>
+                    <output expression="&quot;categoria: Bajo peso&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="imc &lt;= 24.9">
+                        <then>
+                            <output expression="&quot;categoria: Normal&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="imc &lt;= 29.9">
+                                <then>
+                                    <output expression="&quot;categoria: Sobrepeso&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="imc &lt;= 29.9">
+                                        <then>
+                                            <output expression="&quot;categoria: Obesidad clase 1&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="imc &lt;= 34.9">
+                                                <then>
+                                                    <output expression="&quot;categoria: Obesidad clase 2&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="imc &lt;= 34.9">
+                                                        <then>
+                                                            <output expression="&quot;categoria: Obesidad clase 3&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="0" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
